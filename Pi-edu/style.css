@@ -1,0 +1,46 @@
+.header {
+    border-bottom: 3px solid #32b9cd;
+    background-color: black;
+    height: 100px;
+  }
+  
+  .header .container {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .header .img{
+    width: 1px;
+    height: 1px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header a {
+    text-decoration: none;
+    color: yellow;
+  }
+  
+  .home {
+    font-weight: 800;
+    color: yellow;
+  }
+  
+  .navbar {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    color: black;
+  }
+  
+  
+  .titulo {
+    color: #32b9cd;
+    width: fit-content;
+    font-weight: 500;
+    
+  }
+  
