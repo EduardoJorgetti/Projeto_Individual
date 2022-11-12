@@ -1,0 +1,74 @@
+.bg-img-body{
+    background-image: url("./assets/1_volei_masculino-21373614.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.box-login{
+    width: 500px;
+    height: 400px;
+    background-color: transparent;
+    position: absolute;
+    top: 15vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.form-box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.box-login img{
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
+    margin-bottom: 2rem;
+}
+
+.form-box input{
+    background: white;
+    border-color: gold;
+    border-radius: 8px;
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.form-box button{
+    margin-top: 18px;
+    background-color: white;
+    color: black;
+    height: 30px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.form-box span[class = "1"]{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium';
+    margin-top: 2px;
+}
+
+.form-box a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium';
+    margin-left: 4px;
+}   
