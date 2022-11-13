@@ -72,3 +72,12 @@
     font-family: 'Franklin Gothic Medium';
     margin-left: 4px;
 }   
+
+.bot{
+    
+    height: 120px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
