@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.body{
+    width: 100vw;
+    height: 1000px;
+    background: #222;
+    color: #fff;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+}
+
+.section{
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.h1{
+    text-align: center;
+    font-size: 28px;
+    margin: 10px;
+}
+
+.centro{
+    text-align: center;
+}
+
+.questao{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.numQuestao{
+    display: block;
+    background: gold;
+    padding: 4px 10px 2px 10px;
+    border-radius: 50%;
+}
+
+.pergunta{
+    margin-left: 16px;
+}
+
+.questao{
+    padding: 24px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    margin-bottom: 32px;
+}
+
+.questao ol li{
+    display: block;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.questao ol li:hover{
+    background: black;
+    cursor: pointer;
+}
+
+.bloqueado{
+    display: none;
+}
+
+.bloqueado li:hover{
+    display: none;
+}
+
+.instrucoes{
+    background: white;
+    color: gold;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    animation: piscar .60s infinite alternate;
+}
