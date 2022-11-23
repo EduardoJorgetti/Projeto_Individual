@@ -11,10 +11,10 @@ let pergunta   = document.querySelector('#pergunta')
 let a = document.querySelector('#a')
 let b = document.querySelector('#b')
 let c = document.querySelector('#c')
+let d = document.querySelector('#d')
 
-// article com a class questoes
 let articleQuestoes = document.querySelector('.questoes')
-// ol li com as alternativas
+
 let alternativas = document.querySelector('#alternativas')
 
 const q0 = {
@@ -23,16 +23,18 @@ const q0 = {
     alternativaA : "Alternativa A",
     alternativaB : "Alternativa B",
     alternativaC : "Alternativa C",
+    alternativaD : "Alternativa D",
     correta      : "0",
 }
 
 const q1 = {
     numQuestao   : 1,
-    pergunta     : "Boreal é o mesmo que...",
-    alternativaA : "Sul",
-    alternativaB : "Leste",
-    alternativaC : "Norte",
-    correta      : "Norte",
+    pergunta     : "A primeira medalha de ouro olímpica da história do volei brasileiro foi em...",
+    alternativaA : "1992",
+    alternativaB : "1996",
+    alternativaC : "1988",
+    alternativaD : "1990",
+    correta      : "1992",
 }
 
 const q2 = {
@@ -72,7 +74,7 @@ const q5 = {
 }
 
 // CONSTANTE COM UM VETOR DE OBJETOS COM TODAS AS QUESTOES
-const questoes = [q0, q1, q2, q3, q4, q5]
+const questoes = [q0, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10]
 
 let numero = document.querySelector('#numero')
 let total  = document.querySelector('#total')
@@ -89,6 +91,7 @@ pergunta.textContent   = q1.pergunta
 a.textContent = q1.alternativaA
 b.textContent = q1.alternativaB
 c.textContent = q1.alternativaC
+d.textContent = q1.alternativaD
 
 // CONFIGURAR O VALUE INICIAL DA 1a QUESTAO COMPLETA
 a.setAttribute('value', '1A')

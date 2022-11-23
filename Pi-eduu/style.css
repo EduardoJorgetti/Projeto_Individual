@@ -5,8 +5,8 @@ body{
 }
 
 .header{
-  color: #32b9cd; 
-  border-bottom: solid 3px #32b9cd;
+  color: blue; 
+  border-bottom: solid 3px blue;
 }
 
 .container{
@@ -19,14 +19,6 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-}
-
-.header .container .img{
-  display: flex;
-  width: 50px;
-  height: 50px;
-  justify-content: center;
-  align-items: center;
 }
 
 .navbar{
@@ -50,20 +42,17 @@ body{
 }
 
 .banner .container{
-  height: 400px;
+  height: 40px;
   display: flex; 
   justify-content: center;
   align-items: center;
-  margin-left: 120%;
+  margin-left: 105%;
 }
 
 .banner p{
-  font-size: 36px;
-  width: 280px;
-}
-
-.banner .container span{
-  font-weight: 400;
+  font-size: 20px;
+  color: gold;
+  text-align: left;
 }
 
 .social{
@@ -91,20 +80,27 @@ body{
 }
 
 .footer{
-  background-color: #32b9cd;
-  height: 150px;
-  color: #fff;
+  background-color: blue;
+  height: 70px;
+  color: gold;
   display: flex;
+  text-align: center;
 }
 
 .footer .container{
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer span{
+  width: 100%;
 }
 
 .header ul #aqui {
   font-weight: 1000;
-  color: skyblue;
+  color: blue;
   text-transform: uppercase;
 }
 
