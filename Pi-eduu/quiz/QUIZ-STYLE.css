@@ -2,26 +2,28 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
+    position: relative;
 }
 
-.body{
+body {
     width: 100vw;
-    height: 1000px;
+    height: 100vh;
     background: #222;
-    color: #fff;
+    color: gold;
 }
 
-.main{
+main {
     width: 100%;
     height: 100%;
     padding: 16px;
 }
 
-.section{
+section {
     width: 100%;
     margin: 0 auto;
+    padding: 16px;
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
@@ -29,67 +31,91 @@
     align-items: center;
 }
 
-.h1{
+h1 {
     text-align: center;
     font-size: 28px;
     margin: 10px;
 }
 
-.centro{
+.centro {
     text-align: center;
+    font-size: 25px;
 }
 
-.questao{
+.questao {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.numQuestao{
+#numQuestao {
     display: block;
-    background: gold;
+    background: #00b0ff;
     padding: 4px 10px 2px 10px;
     border-radius: 50%;
 }
 
-.pergunta{
+#pergunta {
     margin-left: 16px;
 }
 
-.questao{
+/* article que acomoda a questao completa */
+.questoes {
     padding: 24px;
-    border: 1px solid blue;
+    border: 1px solid #ececec;
     border-radius: 5px;
     margin-bottom: 32px;
 }
 
-.questao ol li{
+.questoes ol li {
     display: block;
     margin: 16px;
     padding: 16px;
     border-radius: 8px;
 }
 
-.questao ol li:hover{
-    background: black;
+.questoes ol li:hover {
+    background: #00b0ff;
     cursor: pointer;
 }
 
-.bloqueado{
+.bloqueado {
     display: none;
 }
 
-.bloqueado li:hover{
+.bloqueado li:hover {
     display: none;
 }
 
-.instrucoes{
-    background: white;
-    color: gold;
+#instrucoes {
+    background: #ccc;
+    color: #191919;
     padding: 10px;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     margin-bottom: 16px;
-    animation: piscar .60s infinite alternate;
+}
+
+#aviso {
+    color: #00b0ff;
+}
+
+.footer{
+    background-color: blue;
+    border: solid 2px gold;
+    margin-top: 92px;
+    height: 80px;
+    width: 1370px;
+    margin-left: -20px;
+    display: flex;
+    justify-content: center;
+    border-left: transparent;
+    border-right: transparent;
+}
+
+.footer span{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 25px;
 }
