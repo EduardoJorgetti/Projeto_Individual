@@ -9,6 +9,22 @@
     height: 100%;
 }
 
+.bg-img-body .mudar {
+    font-weight: 800;
+    color: transparent;
+    text-transform: uppercase;
+    display: flex;
+    margin-left: 800px;
+    margin-top: 40px;
+}
+ 
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium';
+}
+
 .box-login{
     width: 500px;
     height: 400px;
@@ -62,6 +78,8 @@
     border-radius: 8px;
     margin-bottom: 20px;
     width: 100px;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium';
 }
 .bot1{
     display: flex;

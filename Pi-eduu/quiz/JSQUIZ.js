@@ -1,21 +1,21 @@
-let instrucoes = document.querySelector('#instrucoes')
-let aviso = document.querySelector('#aviso')
-let pontos = 0 // pontos para o placar
-let placar = 0 // placar
+var instrucoes = document.querySelector('#instrucoes')
+var aviso = document.querySelector('#aviso')
+var pontos = 0 
+var placar = 0 
 
-// PERGUNTA
-let numQuestao = document.querySelector('#numQuestao')
-let pergunta   = document.querySelector('#pergunta')
 
-// ALTERNATIVAS
-let a = document.querySelector('#a')
-let b = document.querySelector('#b')
-let c = document.querySelector('#c')
-let d = document.querySelector('#d')
+var numQuestao = document.querySelector('#numQuestao')
+var pergunta   = document.querySelector('#pergunta')
 
-let articleQuestoes = document.querySelector('.questoes')
 
-let alternativas = document.querySelector('#alternativas')
+var a = document.querySelector('#a')
+var b = document.querySelector('#b')
+var c = document.querySelector('#c')
+var d = document.querySelector('#d')
+
+var articleQuestoes = document.querySelector('.questoes')
+
+var alternativas = document.querySelector('#alternativas')
 
 const q0 = {
     numQuestao   : 0,
@@ -39,42 +39,46 @@ const q1 = {
 
 const q2 = {
     numQuestao   : 2,
-    pergunta     : "Austral é o mesmo que...",
-    alternativaA : "Oeste",
-    alternativaB : "Sul",
-    alternativaC : "Norte",
-    correta      : "Sul",
+    pergunta     : "O atual levantador da seleção masculina é:",
+    alternativaA : "Dante",
+    alternativaB : "Lucarelli",
+    alternativaC : "Bruninho",
+    alternativaD : "Thales",
+    correta      : "Bruninho",
 }
 
 const q3 = {
     numQuestao   : 3,
-    pergunta     : "Nascente é o mesmo que...",
-    alternativaA : "Sul",
-    alternativaB : "Leste",
-    alternativaC : "Oeste",
-    correta      : "Leste",
+    pergunta     : "A atual capitã da seleção feminina é a:",
+    alternativaA : "Nathinha",
+    alternativaB : "Gabi",
+    alternativaC : "Macris",
+    alternativaD : "Carol",
+    correta      : "Gabi",
 }
 
 const q4 = {
     numQuestao   : 4,
-    pergunta     : "Poente é o mesmo que...",
-    alternativaA : "Norte",
-    alternativaB : "Leste",
-    alternativaC : "Oeste",
-    correta      : "Oeste",
+    pergunta     : "Juntando as 2 seleções, em Olimpíadas o Brasil possui:",
+    alternativaA : "4 medalhas de ouro e 4 de prata",
+    alternativaB : "4 medlhas de ouro e 5 de prata",
+    alternativaC : "5 medalhas de ouro e 4 de prata",
+    alternativaD : "5 medalhas de ouro e 5 de prata",
+    correta      : "5 medalhas de ouro e 4 de prata",
 }
 
 const q5 = {
     numQuestao   : 5,
-    pergunta     : "O Brasil se localiza em qual continente?",
-    alternativaA : "África",
-    alternativaB : "Europa",
-    alternativaC : "América",
-    correta      : "América",
+    pergunta     : "Quem revolucionou a posição de líbero no Brasil?",
+    alternativaA : "Rodrigão",
+    alternativaB : "Serginho",
+    alternativaC : "Giba",
+    alternativaD : "Ricardinho",
+    correta      : "Serginho",
 }
 
 // CONSTANTE COM UM VETOR DE OBJETOS COM TODAS AS QUESTOES
-const questoes = [q0, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10]
+const questoes = [q0, q1, q2, q3, q4, q5]
 
 let numero = document.querySelector('#numero')
 let total  = document.querySelector('#total')
@@ -97,6 +101,7 @@ d.textContent = q1.alternativaD
 a.setAttribute('value', '1A')
 b.setAttribute('value', '1B')
 c.setAttribute('value', '1C')
+d.setAttribute('value', '1D')
 
 // PARA MONTAR AS PROXIMAS QUESTOES
 function proximaQuestao(nQuestao) {
@@ -106,21 +111,25 @@ function proximaQuestao(nQuestao) {
     a.textContent = questoes[nQuestao].alternativaA
     b.textContent = questoes[nQuestao].alternativaB
     c.textContent = questoes[nQuestao].alternativaC
+    d.textContent = questoes[nQuestao].alternativaD
     a.setAttribute('value', nQuestao+'A')
     b.setAttribute('value', nQuestao+'B')
     c.setAttribute('value', nQuestao+'C')
+    d.setAttribute('value', nQuestao+'D')
 }
 
 function bloquearAlternativas() {
     a.classList.add('bloqueado')
     b.classList.add('bloqueado')
     c.classList.add('bloqueado')
+    d.classList.add('bloqueado')
 }
 
 function desbloquearAlternativas() {
     a.classList.remove('bloqueado')
     b.classList.remove('bloqueado')
     c.classList.remove('bloqueado')
+    d.classList.remove('bloqueado')
 }
 
 function verificarSeAcertou(nQuestao, resposta) {
@@ -129,21 +138,12 @@ function verificarSeAcertou(nQuestao, resposta) {
     console.log("Questão " + numeroDaQuestao)
 
     let respostaEscolhida = resposta.textContent
-    //console.log("RespU " + respostaEscolhida)
 
     let certa = questoes[numeroDaQuestao].correta
-    //console.log("RespC " + certa)
 
     if(respostaEscolhida == certa) {
-        //console.log("Acertou")
-        //respostaEsta.textContent = "Correta 😊"
-        pontos += 10 // pontos = pontos + 10
-    } else {
-        //console.log("Errou!")
-        //respostaEsta.textContent = "Errada 😢"
+        pontos += 10 
     }
-
-    // atualizar placar
     placar = pontos
     instrucoes.textContent = "Pontos " + placar
 
@@ -178,10 +178,12 @@ function fimDoJogo() {
     a.textContent = ""
     b.textContent = ""
     c.textContent = ""
+    d.textContent = ""
 
     a.setAttribute('value', '0')
     b.setAttribute('value', '0')
     c.setAttribute('value', '0')
+    d.setAttribute('value', '0')
 
     // OCULTAR O ARTICLE DA QUESTAO
     articleQuestoes.style.display = 'none'

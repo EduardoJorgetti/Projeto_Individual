@@ -14,7 +14,6 @@ body{
   margin: auto;
 }
 
-
 .header .container{
   display: flex;
   justify-content: space-between;
@@ -30,15 +29,14 @@ body{
   align-items: center;
   font-weight: 200;
 }
-
+/* inicio maculino */
 .banner{
   color: blue;
   padding: 40px 0px;
   height: 300px;
   width: 50%;
-  background-image: url("./assets/1_volei_masculino-21373614.jpg");
+  background-image: url("./assets/selecaoMasc.jpeg");
   background-size: cover;
-
 }
 
 .banner .container{
@@ -49,42 +47,71 @@ body{
   margin-left: 105%;
 }
 
-.banner p{
+.banner .container p{
+  display: flex;
+  margin-top: 200px;
   font-size: 20px;
   color: gold;
-  text-align: left;
 }
-
-.social{
-  background-color: #e5e5e5;
+.espaco{
+  width: 100%;
+  height: 100px;
+  background-color: white;
 }
-
-.box img{
-  width: 170px;
+/* inicio feminino */
+.banner2{
+  color: blue;
+  padding: 40px 0px;
+  height: 400px;
+  width: 50%;
+  background-image: url("./assets/selecaoFem.webp");
+  background-size: cover;
 }
-
-
-.social .container .boxes{
-  display: flex;
-}
-
-.box{
-  margin: 50px 10px 10px 10px;
-  display: flex;
-  flex-direction: column;
+.banner2 .container2{
+  height: 40px;
+  display: flex; 
+  justify-content: center;
   align-items: center;
+  margin-left: 105%;
+  width: 50%;
 }
 
-.social p{
-  text-align: center;
+.banner2 .container2 p{
+  display: flex;
+  margin-top: 400px;
+  font-size: 20px;
+  color: gold;
 }
+/* chamada quiz */
+.chamadaQuiz{
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Franklin Gothic Medium';
+  font-size: 20px;
+}
+.chamadaQuiz span{
+  color: blue;
+}
+.chamadaQuiz a{
+  text-decoration: none;
+  color: gold;
+  margin-left: 250px;
+  font-size: 30px;
 
+}
+/* inicio footer */
 .footer{
-  background-color: blue;
-  height: 70px;
+  background-color: transparent;
+  height: 50px;
   color: gold;
   display: flex;
   text-align: center;
+  font-family: 'Franklin Gothic Medium';
+  font-size: 20px;
 }
 
 .footer .container{
@@ -104,7 +131,7 @@ body{
   text-transform: uppercase;
 }
 
-a {
+a{
   color: gold;
   text-decoration: none;
   font-weight: bold;
