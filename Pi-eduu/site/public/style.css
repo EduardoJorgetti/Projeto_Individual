@@ -1,0 +1,175 @@
+body{
+  margin: 0;
+  font-family: 'Franklin Gothic Medium';
+  background-color: black;
+}
+
+.header{
+  color: blue; 
+  border-bottom: solid 3px blue;
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+}
+
+.header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.navbar{
+  display: flex;
+  width: 300px;
+  justify-content: space-around;
+  color: gold;
+  list-style: none;
+  align-items: center;
+  font-weight: 200;
+}
+/* inicio maculino */
+.banner{
+  color: blue;
+  padding: 40px 0px;
+  height: 300px;
+  width: 50%;
+  background-image: url("./assets/selecaoMasc.jpeg");
+  background-size: cover;
+}
+
+.banner .container{
+  height: 40px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  margin-left: 105%;
+}
+
+.banner .container p{
+  display: flex;
+  margin-top: 200px;
+  font-size: 20px;
+  color: gold;
+}
+.espaco{
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+/* inicio feminino */
+.banner2{
+  color: blue;
+  padding: 40px 0px;
+  height: 400px;
+  width: 50%;
+  background-image: url("./assets/selecaoFem.jpeg");
+  background-size: cover;
+}
+.banner2 .container2{
+  height: 40px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  margin-left: 105%;
+  width: 50%;
+}
+
+.banner2 .container2 p{
+  display: flex;
+  margin-top: 400px;
+  font-size: 20px;
+  color: gold;
+}
+/* inicio valores */
+.banner3{
+  color: blue;
+  padding: 40px 0px;
+  height: 400px;
+  width: 50%;
+}
+.banner3 .container3{
+  height: 120%;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+  width: 50%;
+  border: solid 2px gold;
+  border-bottom: transparent;
+  border-left: transparent;
+  border-top: transparent;
+}
+.banner3 .container3 span{
+  display: flex;
+  font-size: 40px;
+  color: blue;
+  width: 800%;
+  margin-bottom: 400px;
+}
+.banner3 .container3 p{
+  display: flex;
+  font-size: 20px;
+  color: gold;
+  width: 600%;
+  margin-left: -680px;
+}
+/* chamada quiz */
+.chamadaQuiz{
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Franklin Gothic Medium';
+  font-size: 20px;
+}
+.chamadaQuiz span{
+  color: blue;
+}
+.chamadaQuiz a{
+  text-decoration: none;
+  color: gold;
+  margin-left: 250px;
+  font-size: 30px;
+
+}
+/* inicio footer */
+.footer{
+  background-color: transparent;
+  height: 50px;
+  color: gold;
+  display: flex;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium';
+  font-size: 20px;
+}
+
+.footer .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer span{
+  width: 100%;
+}
+
+.header ul #aqui {
+  font-weight: 1000;
+  color: blue;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+a{
+  color: gold;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
