@@ -55,7 +55,7 @@ body{
 }
 .espaco{
   width: 100%;
-  height: 100px;
+  height: 80px;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -83,39 +83,6 @@ body{
   margin-top: 400px;
   font-size: 20px;
   color: gold;
-}
-/* inicio valores */
-.banner3{
-  color: blue;
-  padding: 40px 0px;
-  height: 400px;
-  width: 50%;
-}
-.banner3 .container3{
-  height: 120%;
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-  margin-left: 50px;
-  width: 50%;
-  border: solid 2px gold;
-  border-bottom: transparent;
-  border-left: transparent;
-  border-top: transparent;
-}
-.banner3 .container3 span{
-  display: flex;
-  font-size: 40px;
-  color: blue;
-  width: 800%;
-  margin-bottom: 400px;
-}
-.banner3 .container3 p{
-  display: flex;
-  font-size: 20px;
-  color: gold;
-  width: 600%;
-  margin-left: -680px;
 }
 /* chamada quiz */
 .chamadaQuiz{

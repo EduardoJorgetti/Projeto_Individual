@@ -10,7 +10,7 @@
 <body class="bg-img-body">
     <div class="mudar">
         <li class="l1"><a href="./Home.html"> <span style="color: white ; font-weight: bolder; font-size: 22px;"> Home </span></a> </li>
-        <li class="l2"> <a href="./Cadastro.html"> <span style="color: white ; font-weight: bolder; font-size: 22px;"> Cadastro </span></a></li>
+        <li class="l2"> <a href="./cadastroIndividual.html"> <span style="color: white ; font-weight: bolder; font-size: 22px;"> Cadastro </span></a></li>
     </div>
     <section class="box-login">
         <h1>Bem Vindo!</h1>
@@ -33,6 +33,7 @@
 </body>
 </html>
 <script>
+
 
     function entrar() {
         aguardar();
@@ -77,7 +78,7 @@
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
+                        window.location = "quiz.html";
                     }, 1000); // apenas para exibir o loading
 
                 });

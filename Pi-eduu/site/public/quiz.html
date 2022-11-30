@@ -7,85 +7,122 @@
     <meta id="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
     <link rel="stylesheet" href="./StyleQuizReal.css">
+ 
 </head>
-<body class="bg-img-body">
 
-    <h1>Quiz</h1>
+<body class="bg-img-body">
+        <h1>Quiz</h1>
     <div class="quiz">
         <div class="container">
             <p id="p" style="display: block;">RESPONDA AS QUESTÕES CORRETAMENTE PARA ACUMULAR PONTOS!</p>
             <div class="questao" id="questao_um" style="display: block;">
                 <label for="q1">A primeira medalha de ouro olímpica da história do volei brasileiro foi em...</label>
                 <ul>
-                    <li><input class="pergunta" type="radio" name="q1" id="q1" value="true">1992</li>
-                    <li><input class="pergunta" type="radio" name="q1" id="q1" value="false">1988</li>
-                    <li><input class="pergunta" type="radio" name="q1" id="q1" value="false">1996</li>
-                    <li><input class="pergunta" type="radio" name="q1" id="q1" value="false">2000</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q1" id="q1_inp"
+                            value="0">1996</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q1" id="q1_inp"
+                            value="1">1992</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q1" id="q1_inp"
+                            value="0">1988</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q1" id="q1_inp"
+                            value="0">2000</li>
                 </ul>
-                <button id="btn-salvar" type="submit" onclick="resposta()">Confirmar resposta</button>
+                <button class="botaoquiz" id="btn-salvar" type="submit" onclick="resposta()">Confirmar resposta</button>
             </div>
             <div class="questao" id="questao_dois" style="display: none;">
                 <label for="q2">O atual levantador da seleção masculina é:</label>
                 <ul>
-                    <li><input class="pergunta" type="radio" name="q2" id="q2" value="false">Dante</li>
-                    <li><input class="pergunta" type="radio" name="q2" id="q2" value="false">Lucarelli</li>
-                    <li><input class="pergunta" type="radio" name="q2" id="q2" value="true">Bruninho</li>
-                    <li><input class="pergunta" type="radio" name="q2" id="q2" value="false">thales</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q2" id="q2_inp"
+                            value="0">Lucarelli</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q2" id="q2_inp"
+                            value="0">Dante</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q2" id="q2_inp"
+                            value="1">Bruninho</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q2" id="q2_inp"
+                            value="0">Giba</li>
                 </ul>
-                <button id="btn-salvar" type="submit" onclick="resposta()">Confirmar resposta</button>
+                <button class="botaoquiz" id="btn-salvar" type="submit" onclick="resposta()">Confirmar resposta</button>
             </div>
             <div class="questao" id="questao_tres" style="display: none;">
                 <label for="q3">A atual capitã da seleção feminina é a:</label>
                 <ul>
-                    <li><input class="pergunta" type="radio" name="q3" id="q3" value="true">Gabi</li>
-                    <li><input class="pergunta" type="radio" name="q3" id="q3" value="false">Carolana</li>
-                    <li><input class="pergunta" type="radio" name="q3" id="q3" value="false">Macris</li>
-                    <li><input class="pergunta" type="radio" name="q3" id="q3" value="false">Carol Gattaz</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q3" id="q3_inp"
+                            value="0">Pri Daroit</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q3" id="q3_inp"
+                            value="0">Macris</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q3" id="q3_inp"
+                            value="0">Carolana</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q3" id="q3_inp"
+                            value="1">Gabi</li>
                 </ul>
-                <button id="btn-salvar" type="submit" onclick="resposta()">Confirmar resposta</button>
+                <button class="botaoquiz" id="btn-salvar" type="submit" onclick="resposta()">Confirmar resposta</button>
             </div>
             <div class="questao" id="questao_quatro" style="display: none;">
                 <label for="q4">Juntando as 2 seleções, em Olimpíadas o Brasil possui:</label>
                 <ul>
-                    <li><input class="pergunta" type="radio" name="q4" id="q4" value="false">4 medalhas de ouro e 4 de prata</li>
-                    <li><input class="pergunta" type="radio" name="q4" id="q4" value="false">4 medalhas de ouro e 5 de prata</li>
-                    <li><input class="pergunta" type="radio" name="q4" id="q4" value="false">5 medalhas de ouro e 5 de prata</li>
-                    <li><input class="pergunta" type="radio" name="q4" id="q4" value="true">5 medlhas de ouro e 4 de prata</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q4" id="q4_inp"
+                            value="1">5 medalhas de ouro e 4 de
+                            prata</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q4" id="q4_inp"
+                            value="0">4 medalhas de ouro e 4 de
+                            prata</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q4" id="q4_inp"
+                            value="0">4 medalhas de ouro e 5 de
+                            prata</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q4" id="q4_inp"
+                            value="0">5 medalhas de ouro e 5 de
+                            prata</li>
                 </ul>
-                <button id="btn-salvar" type="submit" onclick="resposta()">Confirmar resposta</button>
+                <button class="botaoquiz" id="btn-salvar" type="submit" onclick="resposta()">Confirmar resposta</button>
             </div>
             <div class="questao" id="questao_cinco" style="display: none;">
                 <label for="q5">Quem revolucionou a posição de líbero no Brasil?</label>
                 <ul>
-                    <li><input class="pergunta" type="radio" name="q5" id="q5" value="false">Rodrigão</li>
-                    <li><input class="pergunta" type="radio" name="q5" id="q5" value="true">Serginho</li>
-                    <li><input class="pergunta" type="radio" name="q5" id="q5" value="false">Giba</li>
-                    <li><input class="pergunta" type="radio" name="q5" id="q5" value="false">Ricardinho</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q5" id="q5_inp"
+                            value="0">Rodrigão</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q5" id="q5_inp"
+                            value="0">Dante</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q5" id="q5_inp"
+                            value="1">Serginho</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q5" id="q5_inp"
+                            value="0">Giba</li>
                 </ul>
-                <button id="btn-salvar" type="submit" onclick="resposta()">Confirmar resposta</button>
+                <button class="botaoquiz" id="btn-salvar" type="submit" onclick="resposta()">Confirmar resposta</button>
             </div>
             <div class="questao" id="questao_seis" style="display: none;">
-                <label for="q6">Qual(is) jogadora(s) brasileiras fazem parte do TOP 5 mundial?</label>
+                <label for="q6">Qual(is) jogadora(s) brasileiras fazem parte do atual TOP 5 mundial?</label>
                 <ul>
-                    <li><input class="pergunta" type="radio" name="q6" id="q6" value="true">Gabi</li>
-                    <li><input class="pergunta" type="radio" name="q6" id="q6" value="false">Gabi e Macris</li>
-                    <li><input class="pergunta" type="radio" name="q6" id="q6" value="false">Carolana e Macris</li>
-                    <li><input class="pergunta" type="radio" name="q6" id="q6" value="true">Gabi e Carolana</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q6" id="q6_inp"
+                            value="1">Carolana e Gabi</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q6" id="q6_inp"
+                            value="0">Macris e Pri Daroit</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q6" id="q6_inp"
+                            value="0">Gabi e Pri Daroit</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q6" id="q6_inp"
+                            value="0">Gabi</li>
                 </ul>
-                <button id="btn-salvar" type="submit" onclick="resposta()">Confirmar resposta</button>
+                <button class="botaoquiz" id="btn-salvar" type="submit" onclick="resposta()">Confirmar resposta</button>
             </div>
             <div class="questao" id="questao_sete" style="display: none;">
-                <label for="q7">A seleção masculina e feminina ocupam, respectivamente, que posições no ranking mundial?</label>
+                <label for="q7">A seleção masculina e feminina ocupam, respectivamente, que posições no ranking
+                    mundial?</label>
                 <ul>
-                    <li><input class="pergunta" type="radio" name="q7" id="q7" value="false">4ª e 5ª colocações</li>
-                    <li><input class="pergunta" type="radio" name="q7" id="q7" value="false">3ª e 4ª colocações</li>
-                    <li><input class="pergunta" type="radio" name="q7" id="q7" value="true">4ª e 3ª colocações</li>
-                    <li><input class="pergunta" type="radio" name="q7" id="q7" value="false">5ª e 4ª colocações</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q7" id="q7_inp"
+                            value="0">1ª e 2ª colocações</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q7" id="q7_inp"
+                            value="0">2ª e 1ª colocações</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q7" id="q7_inp"
+                            value="1">4ª e 3ª colocações</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q7" id="q7_inp"
+                            value="0">4ª e 4ª colocações</li>
                 </ul>
-                <button id="btn-salvar" onclick="resposta()">Confirmar resposta</button>
+                <button class="botaoquiz" id="btn-salvar" type="submit" onclick="resposta()">Confirmar resposta</button>
             </div>
             <div class="questao" id="questao_resposta" style="display: none;">
                 <div id="divresult"></div>
+            </div>
+            <div class="questao" style="display: none;">
+            <div class="pergunta" id="msg_pontuacao"></div>
             </div>
         </div>
     </div>
@@ -93,113 +130,141 @@
     <!--footer inicio-->
     <div class="footer">
         <div class="container">
-            <footer><span> Desenvolvido por Eduardo Jorgetti &copy; 2022 </span></footer>
+            <h4>Feito por Eduardo Jorgetti</h4>
         </div>
     </div>
+    <!--footer fim-->
 </body>
+
 </html>
+<script src="./quiz.JS"></script>
 <script>
-   var cont = 1;
+
+    var cont = 1;
     var respostas = [];
     var questao = false;
-   
-    
-    function resposta() {
-        var pontos = 0;
+    var pontos = 0;
 
+
+    function resposta() {
+        msg_pontuacao.style.display = 'none';
         for (let index = 1; index <= 7; index++) {
-        
+
+
+
             if (cont == 1) {
-                
+
+                if (document.querySelector('input[name="q1"]:checked').value == 1) {
+                    pontos += 2;
+                }
+
+
                 questao_um.style.display = 'none';
                 questao_dois.style.display = 'block';
                 cont++;
                 break;
-                if (document.querySelector('input[name="q1"]:checked').value = 1) {
-                    pontos ++;
-                }
-            
             }
-            
+
             if (cont == 2) {
-                
+
+                if (document.querySelector('input[name="q2"]:checked').value == 1) {
+                    pontos += 2;
+                }
+
+
                 questao_dois.style.display = 'none';
                 questao_tres.style.display = 'block';
                 cont++;
                 break;
-               
-                if (document.querySelector('input[name="q2"]:checked').value = 2) {
-                    pontos ++;
-                }
             }
-            
+
             if (cont == 3) {
+
+                if (document.querySelector('input[name="q3"]:checked').value == 1) {
+                    pontos += 2;
+                }
+
 
                 questao_tres.style.display = 'none';
                 questao_quatro.style.display = 'block';
                 cont++;
                 break;
+            }
 
-                if (document.querySelector('input[name="q2"]:checked').value = 3) {
-                    pontos ++;
-                }
-            } 
-            
             if (cont == 4) {
-                
+
+                if (document.querySelector('input[name="q4"]:checked').value == 1) {
+                    pontos += 2;
+                }
+
+
                 questao_quatro.style.display = 'none';
                 questao_cinco.style.display = 'block';
                 cont++;
                 break;
-                                
-                if (document.querySelector('input[name="q4"]:checked').value = 4) {
-                    pontos ++;
-                }
-               
             }
-            
+
             if (cont == 5) {
-                
+
+                if (document.querySelector('input[name="q5"]:checked').value == 1) {
+                    pontos += 2;
+                }
+
+
                 questao_cinco.style.display = 'none';
                 questao_seis.style.display = 'block';
                 cont++;
                 break;
-               
-                                
-                if (document.querySelector('input[name="q5"]:checked').value = 5) {
-                    pontos ++;
-                }
-            
             }
-            
+
             if (cont == 6) {
-                
+
+                if (document.querySelector('input[name="q6"]:checked').value == 1) {
+                    pontos += 2;
+                }
+
+
                 questao_seis.style.display = 'none';
                 questao_sete.style.display = 'block';
                 cont++;
                 break;
-               
-                                
-                if (document.querySelector('input[name="q6"]:checked').value = 6) {
-                    pontos ++;
-                }
             }
-            
+
             if (cont == 7) {
-                
+
+                if (document.querySelector('input[name="q7"]:checked').value == 1) {
+                    pontos += 2;
+                }
+
+
                 questao_sete.style.display = 'none';
                 questao_resposta.style.display = 'block';
-                cont = 1;              
+                cont = 1;
+                resultado();
                 break;
-               
-                
-                if (document.querySelector('input[name="q6"]:checked').value = 7) {
-                    pontos ++;
-                }
-            }        
+            }
+
+
+
+
+
+
+
         }
-        p.style.display = 'none'
-        divresult.innerHTML = `PONTOS ${pontos}`
     }
-      
+
+    function resultado() {
+
+        if (pontos >= 12 ) {
+            divresult.innerHTML = `Pontos ${(pontos).toFixed(0)}! <br>
+                           Parábens, você entende muito sobre a seleção brasileira!`
+        } else if (pontos >= 8 && pontos <= 11) {
+            divresult.innerHTML = `Pontos ${(pontos).toFixed(0)}! <br>
+                           Boa, foi bem!`
+        } else {
+            divresult.innerHTML = `Pontos ${(pontos).toFixed(0)}! <br>
+                           Mandou mal!`
+        }
+
+       }
 </script>
