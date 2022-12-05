@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta id="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
-    <link rel="stylesheet" href="./StyleQuizReal.css">
- 
+    <link rel="stylesheet" href="StyleQuizReal.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body class="bg-img-body">
-        <h1>Quiz</h1>
+    <h1>Quiz</h1>
     <div class="quiz">
         <div class="container">
             <p id="p" style="display: block;">RESPONDA AS QUESTÕES CORRETAMENTE PARA ACUMULAR PONTOS!</p>
@@ -60,18 +61,18 @@
             <div class="questao" id="questao_quatro" style="display: none;">
                 <label for="q4">Juntando as 2 seleções, em Olimpíadas o Brasil possui:</label>
                 <ul>
-                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q4" id="q4_inp"
-                            value="1">5 medalhas de ouro e 4 de
-                            prata</li>
-                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q4" id="q4_inp"
-                            value="0">4 medalhas de ouro e 4 de
-                            prata</li>
-                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q4" id="q4_inp"
-                            value="0">4 medalhas de ouro e 5 de
-                            prata</li>
-                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q4" id="q4_inp"
-                            value="0">5 medalhas de ouro e 5 de
-                            prata</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q4" id="q4_inp" value="1">5
+                        medalhas de ouro e 4 de
+                        prata</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q4" id="q4_inp" value="0">4
+                        medalhas de ouro e 4 de
+                        prata</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q4" id="q4_inp" value="0">4
+                        medalhas de ouro e 5 de
+                        prata</li>
+                    <li style="list-style: none;"><input class="pergunta" type="radio" name="q4" id="q4_inp" value="0">5
+                        medalhas de ouro e 5 de
+                        prata</li>
                 </ul>
                 <button class="botaoquiz" id="btn-salvar" type="submit" onclick="resposta()">Confirmar resposta</button>
             </div>
@@ -121,8 +122,10 @@
             <div class="questao" id="questao_resposta" style="display: none;">
                 <div id="divresult"></div>
             </div>
-            <div class="questao" style="display: none;">
-            <div class="pergunta" id="msg_pontuacao"></div>
+            <div id="grafico" style="display: none;">
+                <div id="chartzinho">
+                    <canvas id="myChart"></canvas>
+                </div>
             </div>
         </div>
     </div>
@@ -137,20 +140,14 @@
 </body>
 
 </html>
-<script src="./quiz.JS"></script>
 <script>
-
     var cont = 1;
     var respostas = [];
     var questao = false;
     var pontos = 0;
 
-
     function resposta() {
-        msg_pontuacao.style.display = 'none';
         for (let index = 1; index <= 7; index++) {
-
-
 
             if (cont == 1) {
 
@@ -235,36 +232,114 @@
                 if (document.querySelector('input[name="q7"]:checked').value == 1) {
                     pontos += 2;
                 }
-
-
                 questao_sete.style.display = 'none';
                 questao_resposta.style.display = 'block';
                 cont = 1;
                 resultado();
                 break;
             }
-
-
-
-
-
-
-
         }
     }
 
     function resultado() {
 
-        if (pontos >= 12 ) {
-            divresult.innerHTML = `Pontos ${(pontos).toFixed(0)}! <br>
+        if (pontos >= 12) {
+            divresult.innerHTML = `Pontos ${pontos}! <br>
                            Parábens, você entende muito sobre a seleção brasileira!`
         } else if (pontos >= 8 && pontos <= 11) {
-            divresult.innerHTML = `Pontos ${(pontos).toFixed(0)}! <br>
+            divresult.innerHTML = `Pontos ${pontos}! <br>
                            Boa, foi bem!`
         } else {
-            divresult.innerHTML = `Pontos ${(pontos).toFixed(0)}! <br>
+            divresult.innerHTML = `Pontos ${pontos}! <br>
                            Mandou mal!`
         }
 
-       }
+        quiz()
+    }
+
+    function quiz() {
+        var pontosVar = pontos;
+        var idVar = sessionStorage.ID_USUARIO;
+
+        fetch("/usuarios/quiz", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                pontosServer: pontosVar,
+                idServer: idVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                alert('Quiz enviado ao bancos')
+
+                grafico.style.display = 'block'
+
+
+                obterGrafico();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
+        // return false;
+    }
+
+    function obterGrafico() {
+
+        fetch("/dash/listar").then(function (resposta) {
+            if (resposta.ok) {
+
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+
+                    let data = {
+                        labels: [],
+                        datasets: [{
+                            label: ['Top 5 - Desafio'],
+                            backgroundColor: ['#0000CD', '#DAA520', '#fcdf83', '#788cbf', '#838e91'],
+                            data: [],
+                        }
+                        ]
+                    };
+
+                    const config = {
+                        type: 'bar',
+                        data: data,
+                        options: {
+                            animations: {
+
+                            }
+                        }
+                    };
+
+                    config.options.animation = false;
+
+                    for (let index = 0; index < resposta.length; index++) {
+                        const elemento = resposta[index]
+                        data.labels.push(elemento.nome)
+                        data.datasets[0].data.push(elemento.acertos)
+                    }
+
+                    const myChart = new Chart(
+                        document.getElementById('myChart'),
+                        config
+                    );
+
+                });
+            } else {
+                throw ('Houve um erro na API!');
+            }
+        }).catch(function (resposta) {
+            console.error(resposta);
+
+        });
+    }
+
 </script>

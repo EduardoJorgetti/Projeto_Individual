@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="./styleLogin.css">
+    <link rel="stylesheet" href="styleLogin.css">
 </head>
 <body class="bg-img-body">
     <div class="mudar">
-        <li class="l1"><a href="./Home.html"> <span style="color: white ; font-weight: bolder; font-size: 22px;"> Home </span></a> </li>
-        <li class="l2"> <a href="./cadastroIndividual.html"> <span style="color: white ; font-weight: bolder; font-size: 22px;"> Cadastro </span></a></li>
+        <li class="l1"><a href="index.html"> <span style="color: white ; font-weight: bolder; font-size: 22px;"> Home </span></a> </li>
+        <li class="l2"> <a href="cadastro.html"> <span style="color: white ; font-weight: bolder; font-size: 22px;"> Cadastro </span></a></li>
     </div>
     <section class="box-login">
+        
         <h1>Bem Vindo!</h1>
-        <form action="" class="form-box">
+        <div action="" class="form-box">
             <span style="color: white; font-weight: bolder; font-size: 20px;">E-mail</span>
              <input type="email" id="email_ipt" placeholder="seuemail@gmail.com" autofocus>
     
@@ -26,31 +27,21 @@
             </div>
              <div class="new">
                 <span class="1">Não possui conta?</span>
-                <span class="1">Cadastre-se <a href="./Cadastro.html"> aqui!</a></span>
+                <span class="1">Cadastre-se <a href="cadastro.html"> aqui!</a></span>
              </div>
-        </form>
+        </div>
     </section>
 </body>
 </html>
 <script>
-
-
     function entrar() {
-        aguardar();
+        var emailVar = email_ipt.value;
+        var senhaVar = senha_ipt.value;
 
-        var emailVar = email_input.value;
-        var senhaVar = senha_input.value;
-
-        if (emailVar == "" || senhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            finalizarAguardar();
+        if (emailVar == "" || senhaVar == "") { 
             return false;
         }
-        else {
-            setInterval(sumirMensagem, 5000)
-        }
-
+  
         console.log("FORM LOGIN: ", emailVar);
         console.log("FORM SENHA: ", senhaVar);
 
@@ -75,11 +66,11 @@
 
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
 
                     setTimeout(function () {
                         window.location = "quiz.html";
-                    }, 1000); // apenas para exibir o loading
+                    }, 1000); 
 
                 });
 
@@ -89,19 +80,14 @@
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    finalizarAguardar(texto);
                 });
             }
 
-        }).catch(function (erro) {
-            console.log(erro);
+        }).catch(function (resposta) {
+            console.log(resposta);
         })
 
         return false;
-    }
-
-    function sumirMensagem() {
-        cardErro.style.display = "none"
     }
 
 </script>

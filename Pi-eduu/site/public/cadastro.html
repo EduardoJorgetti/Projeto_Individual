@@ -19,16 +19,16 @@
              <input type="text" id="nome_input" autofocus>
 
              <span style="color: black; font-weight: bolder; font-size: 20px;">E-mail</span>
-             <input type="email" id="email_ipt" placeholder="seuemail@gmail.com" autofocus>
+             <input type="email" id="email_input" placeholder="seuemail@gmail.com" autofocus>
     
              <span style="color: black; font-weight: bolder; font-size: 20px;">Senha</span>
              <input type="password" id="senha_input" placeholder="********">
 
              <span style="color: black; font-weight: bolder; font-size: 20px;" >Confirme sua senha</span>
-             <input type="password" id="confirmacao_senha_ipnut" placeholder="********">
+             <input type="password" id="confirmacao_senha_input" placeholder="********">
 
              <div class="bot2">
-             <button class="bot1" onclick="cadastro()">cadastre-se</button>
+             <button class="bot1" onclick="cadastrar()">cadastre-se</button>
             </div>
             
         </form>
@@ -38,7 +38,6 @@
 </html>
 <script>
     function cadastrar() {
-        aguardar();
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
@@ -48,14 +47,11 @@
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            
+            alert('Algum dos campos informados se encontra vazio')
 
-            // finalizarAguardar();
+            
             return false;
-        }
-        else {
-            setInterval(sumirMensagem, 5000)
         }
 
         // Enviando o valor da nova input
@@ -76,29 +72,19 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                cardErro.style.display = "block";
-
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
                 setTimeout(() => {
-                    window.location = "loginIndividual.html";
+                    window.location = "login.html";
                 }, "2000")
                 
-                limparFormulario();
-                // finalizarAguardar();
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-            // finalizarAguardar();
         });
 
-        return false;
-    }
-
-    function sumirMensagem() {
-        cardErro.style.display = "none"
+        // return false;
     }
 
 </script>
