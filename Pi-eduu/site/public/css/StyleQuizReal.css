@@ -1,5 +1,5 @@
 .bg-img-body{
-    background-image: url("assets/fundoQuizReal.jpg");
+    background-image: url("../assets/fundoQuizReal.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -80,8 +80,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-left: transparent;
-    border-right: transparent;
+
     color: gold;
 }
 
