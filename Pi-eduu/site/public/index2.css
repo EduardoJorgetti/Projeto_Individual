@@ -1,0 +1,207 @@
+body{
+  margin: 0;
+  font-family: 'Franklin Gothic Medium';
+  /* background-color: black; */
+}
+
+.header{
+  height: 9vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #3F3B6C;
+  /* position: fixed; */
+}
+
+.header .container{
+  height: 9vh;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar{
+  display: flex;
+  width: 300px;
+  justify-content: space-evenly;
+  color: gold;
+  list-style: none;
+  align-items: center;
+  font-weight: 200;
+}
+
+.header a{
+  color: gold;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  border-radius: 2vw;
+  padding: 7px 10px;
+}
+
+.header a:hover {
+  background-color: rgb(253, 229, 93);
+  color: #3F3B6C;
+}
+
+#logoSite{
+  width: 2.5vw;
+}
+
+#userName {
+  text-transform: uppercase;
+  width: 8vw;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+.navbar li{
+  font-size: 1.5rem;
+}
+
+#nomeUsuario {
+  font-size: 1.5rem;
+}
+
+.quest {
+  width: 20vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.quest h1{
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  color: aliceblue;
+}
+
+.header ul #aqui {
+  font-weight: 1000;
+  color: blue;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+
+
+/* inicio maculino */
+.banner{
+  background-color: aliceblue;
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.banner .container{
+  height: 70vh;
+  width: 80vw;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner .container img{
+  width: 50%;
+}
+
+.banner .container p{
+  width: 35vw;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+/* inicio feminino */
+.banner2{
+  background-color: aliceblue;
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.banner2 .container{
+  height: 70vh;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+}
+
+.banner2 .container p{
+  width: 35vw;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+.banner2 .container img{
+  width: 50%;
+}
+
+/* chamada quiz */
+.chamadaQuiz{
+  width: 100%;
+  height: 30vh;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.chamadaQuiz .container {
+  border: 1px solid #3F3B6C;
+  border-radius: 2vw;
+  height: 50%;
+  width: 70%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chamadaQuiz span{
+  color: rgb(10, 10, 170);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chamadaQuiz a{
+  text-decoration: none;
+  color: gold;
+  font-size: 2.5rem;
+  padding: 7px 8px;
+  border-radius: 2vw;
+}
+
+.chamadaQuiz a:hover {
+  background-color: rgb(253, 229, 93);
+  color: #3F3B6C;
+}
+/* inicio footer */
+
+.footer{
+  background-color: #3F3B6C;
+  height: 6vh;
+  color: gold;
+  display: flex;
+  font-size: 1.4rem;
+  width: 100%;
+}
+
+.footer .container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
